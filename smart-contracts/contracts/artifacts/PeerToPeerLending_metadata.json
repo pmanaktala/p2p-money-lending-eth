@@ -1,0 +1,364 @@
+{
+	"compiler": {
+		"version": "0.4.18+commit.9cf6e910"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "credits",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getUserCredits",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_credit",
+						"type": "address"
+					}
+				],
+				"name": "changeCreditState",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getCredits",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "destroy",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "users",
+				"outputs": [
+					{
+						"name": "credited",
+						"type": "bool"
+					},
+					{
+						"name": "activeCredit",
+						"type": "address"
+					},
+					{
+						"name": "fraudStatus",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_borrower",
+						"type": "address"
+					}
+				],
+				"name": "setFraudStatus",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "requestedAmount",
+						"type": "uint256"
+					},
+					{
+						"name": "repaymentsCount",
+						"type": "uint256"
+					},
+					{
+						"name": "interest",
+						"type": "uint256"
+					},
+					{
+						"name": "creditDescription",
+						"type": "bytes32"
+					}
+				],
+				"name": "applyForCredit",
+				"outputs": [
+					{
+						"name": "_credit",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_recipient",
+						"type": "address"
+					}
+				],
+				"name": "destroyAndSend",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_credit",
+						"type": "address"
+					},
+					{
+						"name": "state",
+						"type": "uint8"
+					}
+				],
+				"name": "changeCreditState",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_borrower",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogCreditCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "state",
+						"type": "uint8"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogCreditStateChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "active",
+						"type": "bool"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogCreditActiveChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "fraudStatus",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogUserSetFraud",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_currentOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "LogOwnershipTransfered",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"smart-contracts/contracts/PeerToPeerLending.sol": "PeerToPeerLending"
+		},
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"smart-contracts/contracts/Credit.sol": {
+			"keccak256": "0xc55e74cf7d1e2bedba7aa9b31e4ceaf373e02a87ba927117ed717270463fa49b",
+			"urls": [
+				"bzzr://40590874c4b8a0c87b6d75548cc5f2e6f7a38798d4f994f03f93da39cac19d31"
+			]
+		},
+		"smart-contracts/contracts/PeerToPeerLending.sol": {
+			"keccak256": "0xf964bab57e6201be9cff1fff3275594205d6eb443f8cfe73602a30befbc43b97",
+			"urls": [
+				"bzzr://c1d6be7dbad3b599bf481b445eade0f92411c0e98e8cddba00a46e3e5c7e0f79"
+			]
+		},
+		"smart-contracts/contracts/common/Destructible.sol": {
+			"keccak256": "0x6bca3c39c4d48228e82a513b1647f6f0a64b18c9b3c6e16fe3413711656eda7d",
+			"urls": [
+				"bzzr://42ca9998600eeb5d9e5266df144db191509b03b58dd43fafbf03ec60f1a522a8"
+			]
+		},
+		"smart-contracts/contracts/common/Ownable.sol": {
+			"keccak256": "0xfffa53788eb7e34abd06c6b9b0b6346eb7069a7bd88a69e0ad1ebc9cca2e2919",
+			"urls": [
+				"bzzr://dea0861e0acf65dd49668bb6c94911b884f475e785b2ee9fa15d5de12627bc3a"
+			]
+		},
+		"smart-contracts/contracts/common/SafeMath.sol": {
+			"keccak256": "0x583337e75e9e16e04f784c01d4509cc8f7b36025b34e20cddc644dba8f39a7c2",
+			"urls": [
+				"bzzr://9ac10c82bfac80571ebaf5679b607b105ea7529035f07757e8595ba38191c548"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,635 @@
+{
+	"compiler": {
+		"version": "0.4.18+commit.9cf6e910"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_state",
+						"type": "uint8"
+					}
+				],
+				"name": "changeState",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "lenders",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "toggleActive",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "repay",
+				"outputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "revokeVote",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "refund",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "destroy",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "fraudVote",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "invest",
+				"outputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "requestInterest",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getCreditInfo",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					},
+					{
+						"name": "",
+						"type": "bytes32"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "uint8"
+					},
+					{
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_recipient",
+						"type": "address"
+					}
+				],
+				"name": "destroyAndSend",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"name": "_requestedAmount",
+						"type": "uint256"
+					},
+					{
+						"name": "_requestedRepayments",
+						"type": "uint256"
+					},
+					{
+						"name": "_interest",
+						"type": "uint256"
+					},
+					{
+						"name": "_description",
+						"type": "bytes32"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogCreditInitialized",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "state",
+						"type": "uint8"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogCreditStateChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "active",
+						"type": "bool"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogCreditStateActiveChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogBorrowerWithdrawal",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogBorrowerRepaymentInstallment",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogBorrowerRepaymentFinished",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogBorrowerChangeReturned",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "fraudStatus",
+						"type": "bool"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogBorrowerIsFraud",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogLenderInvestment",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogLenderWithdrawal",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogLenderChangeReturned",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogLenderVoteForRevoking",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogLenderVoteForFraud",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "LogLenderRefunded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_currentOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "LogOwnershipTransfered",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"changeState(uint8)": {
+					"details": "Change state function.\r",
+					"params": {
+						"_state": "New state.\r Only accessible to the owner of the contract.\r Changes the state of the contract.\r"
+					}
+				},
+				"fraudVote()": {
+					"details": "Function for voting the borrower as fraudster.\r"
+				},
+				"getBalance()": {
+					"details": "Get current balance.\r return this.balance.\r"
+				},
+				"getCreditInfo()": {
+					"details": "Function to get the whole credit information.\r return borrower\r return description\r return requestedAmount\r return requestedRepayments\r return remainingRepayments\r return interest\r return returnAmount\r return state\r return active\r return this.balance\r"
+				},
+				"invest()": {
+					"details": "Invest function.\r Provides functionality for person to invest in someone's credit,\r incentivised by the return of interest.\r"
+				},
+				"refund()": {
+					"details": "Function for refunding people. "
+				},
+				"repay()": {
+					"details": "Repayment function.\r Allows borrower to make repayment installments.\r"
+				},
+				"requestInterest()": {
+					"details": "Request interest function.\r It can only be executed while contract is in active state.\r It is only accessible to lenders.\r It is only accessible if lender funded 1 or more wei.\r It can only be executed once.\r Transfers the lended amount + interest to the lender.\r"
+				},
+				"revokeVote()": {
+					"details": "Function for revoking the credit.\r"
+				},
+				"toggleActive()": {
+					"details": "Toggle active state function.\r Only accessible to the owner of the contract.\r Toggles the active state of the contract.\r return bool\r"
+				},
+				"withdraw()": {
+					"details": "Withdraw function.\r It can only be executed while contract is in active state.\r It is only accessible to the borrower.\r It is only accessible if the needed amount is gathered in the contract.\r It can only be executed once.\r Transfers the gathered amount to the borrower.\r"
+				}
+			},
+			"title": "Credit contract.\r Inherits the Ownable and Destructible contracts.\r"
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"smart-contracts/contracts/Credit.sol": "Credit"
+		},
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"smart-contracts/contracts/Credit.sol": {
+			"keccak256": "0x0b5b9913f0799bfa99f975ef9ac53fbb2c61b777edd074c0f0cb8ea1c58404b7",
+			"urls": [
+				"bzzr://ff4bc1d1896e78e0cfbf02ec9b264453de4621319b975b4b55c33f7c20d60271"
+			]
+		},
+		"smart-contracts/contracts/common/Destructible.sol": {
+			"keccak256": "0x6bca3c39c4d48228e82a513b1647f6f0a64b18c9b3c6e16fe3413711656eda7d",
+			"urls": [
+				"bzzr://42ca9998600eeb5d9e5266df144db191509b03b58dd43fafbf03ec60f1a522a8"
+			]
+		},
+		"smart-contracts/contracts/common/Ownable.sol": {
+			"keccak256": "0xfffa53788eb7e34abd06c6b9b0b6346eb7069a7bd88a69e0ad1ebc9cca2e2919",
+			"urls": [
+				"bzzr://dea0861e0acf65dd49668bb6c94911b884f475e785b2ee9fa15d5de12627bc3a"
+			]
+		},
+		"smart-contracts/contracts/common/SafeMath.sol": {
+			"keccak256": "0x583337e75e9e16e04f784c01d4509cc8f7b36025b34e20cddc644dba8f39a7c2",
+			"urls": [
+				"bzzr://9ac10c82bfac80571ebaf5679b607b105ea7529035f07757e8595ba38191c548"
+			]
+		}
+	},
+	"version": 1
+}

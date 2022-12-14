@@ -1,0 +1,102 @@
+{
+	"compiler": {
+		"version": "0.4.18+commit.9cf6e910"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "destroy",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_recipient",
+						"type": "address"
+					}
+				],
+				"name": "destroyAndSend",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_currentOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "LogOwnershipTransfered",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"smart-contracts/contracts/common/Destructible.sol": "Destructible"
+		},
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"smart-contracts/contracts/common/Destructible.sol": {
+			"keccak256": "0x6bca3c39c4d48228e82a513b1647f6f0a64b18c9b3c6e16fe3413711656eda7d",
+			"urls": [
+				"bzzr://42ca9998600eeb5d9e5266df144db191509b03b58dd43fafbf03ec60f1a522a8"
+			]
+		},
+		"smart-contracts/contracts/common/Ownable.sol": {
+			"keccak256": "0xb6ff714812919a6ce7971c0292ed4b8cab5a18a3b215370d189c2ac9ed05378f",
+			"urls": [
+				"bzzr://1e8bf2e32069d7ad0f15f89cf0ac9835341b7b1640b138039c6460785e96414f"
+			]
+		}
+	},
+	"version": 1
+}

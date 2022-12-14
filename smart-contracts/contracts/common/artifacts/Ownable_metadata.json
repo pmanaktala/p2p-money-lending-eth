@@ -1,0 +1,74 @@
+{
+	"compiler": {
+		"version": "0.4.26+commit.4563c3fc"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "_currentOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "LogOwnershipTransfered",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"smart-contracts/contracts/common/Ownable.sol": "Ownable"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"smart-contracts/contracts/common/Ownable.sol": {
+			"keccak256": "0xb6ff714812919a6ce7971c0292ed4b8cab5a18a3b215370d189c2ac9ed05378f",
+			"urls": [
+				"bzzr://1e8bf2e32069d7ad0f15f89cf0ac9835341b7b1640b138039c6460785e96414f"
+			]
+		}
+	},
+	"version": 1
+}

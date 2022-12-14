@@ -1,0 +1,35 @@
+{
+	"compiler": {
+		"version": "0.4.18+commit.9cf6e910"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"smart-contracts/contracts/common/SafeMath.sol": "SafeMath"
+		},
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"smart-contracts/contracts/common/SafeMath.sol": {
+			"keccak256": "0x583337e75e9e16e04f784c01d4509cc8f7b36025b34e20cddc644dba8f39a7c2",
+			"urls": [
+				"bzzr://9ac10c82bfac80571ebaf5679b607b105ea7529035f07757e8595ba38191c548"
+			]
+		}
+	},
+	"version": 1
+}

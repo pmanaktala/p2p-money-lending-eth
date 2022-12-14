@@ -5,6 +5,8 @@
 - Aman Bajpayee
 - Leandro de Almeida
 
+Repo Link : https://github.com/pmanaktala/p2p-money-lending-eth
+
 # Updates as on December 13 2022
 
 - The Appliaction has been updated to support the latest version of node, metamask, ganache and truffle.
